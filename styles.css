@@ -1,0 +1,194 @@
+
+html {
+  width: auto;
+  height: 100%;
+  /* margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  overflow: auto; */
+  overflow-x: hidden
+}
+.maprender {
+  width: 100%;
+  height: 60vh;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  overflow: auto;
+}
+header 
+{
+  position: sticky;
+  top: 0;
+  background-color:  navy;
+  z-index: 1000;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+   align-items: center;      
+  justify-content: center;
+}
+
+header h2 {
+  text-align: center;
+  color:white;
+  margin: 0;
+    }
+.map-mask {
+  margin-top: 530px;
+  left: 0;
+  width: 100%;
+  height: 18px;
+  background-color: white;
+  z-index: 2000;
+  pointer-events: none;
+}
+
+
+/* Services Section */
+.services-grid {
+  margin-left: 130px;
+   margin-right: 130px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 cards per row */
+  gap: 25px;
+  color: white;
+ 
+}
+.service-card {
+background:linear-gradient(135deg, #007bff, #00d4ff);
+padding: 25px;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+transition: 0.3s ease;
+      }
+.approach-section {
+  padding: 60px 20px;
+  text-align: center;
+}
+.service-card img {
+  display: block;
+  margin: 15px auto 0;
+  max-width: 75%;
+  height: auto;
+}
+.approach-flow {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.approach-step {
+  background: #f5f7fa;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.approach-step .icon {
+  font-size: 36px;
+  display: block;
+  margin-bottom: 15px;
+}
+.dashboard-icons {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 15px;
+}
+
+.dashboard-icons i {
+  margin: 0 8px;
+}
+
+.project-section{
+  display: flex;
+  align-items: flex-start;
+  gap: 40px;
+}
+.card {
+padding: 25px;
+border-radius: 8px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+transition: 0.3s ease;
+opacity: 0;
+transform: translateY(30px);
+animation: fadeUp 0.6s ease forwards;
+}
+
+.card:nth-child(1) { animation-delay: 0.3s; }
+.card:nth-child(2) { animation-delay: 1.16s; }
+.card:nth-child(3) { animation-delay: 2.26s; }
+.card:nth-child(4) { animation-delay: 3.36s; }
+
+@keyframes fadeUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card h3 {
+    margin-bottom: 10px;
+    color: #1a4ed8;
+}
+
+.card p {
+    font-size: 14px;
+    color: #555;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 6px;
+    display: block;
+    margin-top: 10px;
+}
+.zigzag-images {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.zigzag-images img {
+    width: 45%;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Zigzag alignment */
+.zigzag-images img:nth-child(odd) {
+    align-self: flex-start;
+}
+
+.zigzag-images img:nth-child(even) {
+    align-self: flex-end;
+}
+
+.card:not(:last-child)::after {
+    content: "➜";
+    position: absolute;
+    right: -35px;   /* controls distance */
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 28px;
+    color: #1a4ed8;
+    pointer-events: none;
+}
+   .download-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #1a4ed8;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #163ca8;
+}
